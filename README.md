@@ -24,7 +24,7 @@ class Race {
 Race --> Horse
 ***
 
-## Race::Race[]
+## Race::Race()
 ---
   const int TRACK_LENGTH
   const static int NUM_HORSES
@@ -35,7 +35,7 @@ Race --> Horse
     initialize that horse with its index and the track length
 ---
 
-### Race::start[]
+### Race::start()
 ---
   send random
   bool keepGoing
@@ -47,7 +47,7 @@ Race --> Horse
         set keepGoing to false;
 ---
 
-### Horse::Horse[]
+### Horse::Horse()
 ---
   position = 0
   index = 0
