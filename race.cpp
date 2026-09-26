@@ -1,23 +1,10 @@
 #include <iostream>
 #include "race.h"
-
-/*class Race {
-
-  private:
-    int NUM_HORSES;
-    int TRACK_LENGTH;
-  public:
-    Horse horses[];
-    Race();
-    start()
-} // end Race class constructor??*/
+#include "horse.h"
 
 Race::Race(){
 
-  //const int TRACK_LENGTH = 15;
-  //const static int NUM_HORSES = 5;
-
-  horses[] = {0, 0, 0, 0, 0};
+  int horses[] = {0, 0, 0, 0, 0};
 
   for(int i = 0; i <= NUM_HORSES; i++){
   
@@ -27,7 +14,9 @@ Race::Race(){
 
 void Race::start(){
 
-  srand(time(NULL));
+  Horse h;
+
+  srand(time(NULL)); // syncing time
   bool keepGoing = true;
   while (keepGoing){
 
@@ -36,10 +25,10 @@ void Race::start(){
   
     for (int hn = 0; hn <= NUM_HORSES - 1; hn++){
     
-      advance(hn, horses);
-      printLane(hn, horses);
+      h.advance();
+      h.printLane();
       
-      if (isWinner(hn, horses) == false){
+      if (h.isWinner() == false){
       
         std::cout << "Horse " << hn << " has won!!" << std::endl;
 	keepGoing = false;

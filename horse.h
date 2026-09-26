@@ -1,3 +1,6 @@
+#ifndef HORSE_H_EXISTS
+#define HORSE_H_EXISTS
+
 #include <iostream>
 #include <string>
 #include <random>
@@ -15,3 +18,5 @@ class Horse {
     bool isWinner();
 
 };
+
+#endif

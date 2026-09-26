@@ -1,3 +1,6 @@
+#ifndef RACE_H_EXISTS
+#define RACE_H_EXISTS
+
 #include <iostream>
 #include <string>
 
@@ -12,3 +15,5 @@ class Race {
     void start();
 
 };
+
+#endif
